@@ -1,0 +1,359 @@
+13:15:13.497 [main] DEBUG - Using Log4J2 as the default logging framework
+13:15:13.517 [main] DEBUG - -Dio.netty.leakDetection.level: simple
+13:15:13.517 [main] DEBUG - -Dio.netty.leakDetection.targetRecords: 4
+13:15:13.524 [main] DEBUG - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2e1b374c
+13:15:13.560 [main] DEBUG - -Dio.netty.noUnsafe: false
+13:15:13.560 [main] DEBUG - Java version: 11
+13:15:13.564 [main] DEBUG - sun.misc.Unsafe.theUnsafe: available
+13:15:13.565 [main] DEBUG - sun.misc.Unsafe.copyMemory: available
+13:15:13.566 [main] DEBUG - sun.misc.Unsafe.storeFence: available
+13:15:13.567 [main] DEBUG - java.nio.Buffer.address: available
+13:15:13.568 [main] DEBUG - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at java.base/java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:94) ~[selenium-chrome-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82) ~[selenium-chrome-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:71) ~[selenium-chrome-driver-4.8.1.jar:?]
+	at factory.BaseClass.initializeBrowser(BaseClass.java:63) ~[test-classes/:?]
+	at hooks.Hooks.setup(Hooks.java:22) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162) [cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145) [cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226) [cucumber-junit-7.18.0.jar:7.18.0]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+13:15:13.582 [main] DEBUG - java.nio.Bits.unaligned: available, true
+13:15:13.584 [main] DEBUG - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @2eced48b
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361) ~[?:?]
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:558) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at java.base/java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.87.Final.jar:4.1.87.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:107) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:85) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:80) ~[selenium-remote-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:35) ~[selenium-chromium-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:94) ~[selenium-chrome-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:82) ~[selenium-chrome-driver-4.8.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:71) ~[selenium-chrome-driver-4.8.1.jar:?]
+	at factory.BaseClass.initializeBrowser(BaseClass.java:63) ~[test-classes/:?]
+	at hooks.Hooks.setup(Hooks.java:22) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64) ~[cucumber-java-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:53) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:78) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) ~[junit-4.13.2.jar:4.13.2]
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89) ~[cucumber-junit-7.18.0.jar:7.18.0]
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) ~[junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) ~[junit-4.13.2.jar:4.13.2]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147) ~[cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162) [cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145) [cucumber-core-7.18.0.jar:7.18.0]
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226) [cucumber-junit-7.18.0.jar:7.18.0]
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.2.jar:4.13.2]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.13.2.jar:4.13.2]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) [junit-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) [junit-rt.jar:?]
+13:15:13.596 [main] DEBUG - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+13:15:13.596 [main] DEBUG - sun.misc.Unsafe: available
+13:15:13.599 [main] DEBUG - maxDirectMemory: 2113929216 bytes (maybe)
+13:15:13.599 [main] DEBUG - -Dio.netty.tmpdir: C:\Users\Nataliia\AppData\Local\Temp (java.io.tmpdir)
+13:15:13.599 [main] DEBUG - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+13:15:13.600 [main] DEBUG - Platform: Windows
+13:15:13.601 [main] DEBUG - -Dio.netty.maxDirectMemory: -1 bytes
+13:15:13.601 [main] DEBUG - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+13:15:13.603 [main] DEBUG - java.nio.ByteBuffer.cleaner(): available
+13:15:13.604 [main] DEBUG - -Dio.netty.noPreferDirect: false
+13:15:13.616 [main] DEBUG - org.jctools-core.MpscChunkedArrayQueue: available
+13:15:13.655 [main] DEBUG - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+13:15:13.655 [main] DEBUG - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+13:15:13.714 [main] DEBUG - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+13:15:13.714 [main] DEBUG - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+13:15:13.764 [main] DEBUG - -Dio.netty.eventLoopThreads: 8
+13:15:13.780 [main] DEBUG - -Dio.netty.noKeySetOptimization: false
+13:15:13.780 [main] DEBUG - -Dio.netty.selectorAutoRebuildThreshold: 512
+13:15:13.801 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5d7911d5
+13:15:13.803 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@4a9a878
+13:15:13.805 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1b3ab4f9
+13:15:13.806 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@5c6a5192
+13:15:13.808 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1c8f6c66
+13:15:13.810 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@552cede7
+13:15:13.812 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@1b7f06c7
+13:15:13.814 [main] TRACE - instrumented a special java.util.Set into: sun.nio.ch.WindowsSelectorImpl@151732fb
+13:15:13.862 [main] DEBUG - -Dio.netty.allocator.numHeapArenas: 8
+13:15:13.862 [main] DEBUG - -Dio.netty.allocator.numDirectArenas: 8
+13:15:13.862 [main] DEBUG - -Dio.netty.allocator.pageSize: 8192
+13:15:13.862 [main] DEBUG - -Dio.netty.allocator.maxOrder: 9
+13:15:13.862 [main] DEBUG - -Dio.netty.allocator.chunkSize: 4194304
+13:15:13.862 [main] DEBUG - -Dio.netty.allocator.smallCacheSize: 256
+13:15:13.864 [main] DEBUG - -Dio.netty.allocator.normalCacheSize: 64
+13:15:13.864 [main] DEBUG - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+13:15:13.864 [main] DEBUG - -Dio.netty.allocator.cacheTrimInterval: 8192
+13:15:13.864 [main] DEBUG - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+13:15:13.864 [main] DEBUG - -Dio.netty.allocator.useCacheForAllThreads: false
+13:15:13.864 [main] DEBUG - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+13:15:13.886 [main] DEBUG - -Dio.netty.allocator.type: pooled
+13:15:13.886 [main] DEBUG - -Dio.netty.threadLocalDirectBufferSize: 0
+13:15:13.887 [main] DEBUG - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+13:15:14.265 [Forwarding newSession on session null to remote] DEBUG - -Dio.netty.processId: 19168 (auto-detected)
+13:15:14.268 [Forwarding newSession on session null to remote] DEBUG - -Djava.net.preferIPv4Stack: false
+13:15:14.268 [Forwarding newSession on session null to remote] DEBUG - -Djava.net.preferIPv6Addresses: false
+13:15:14.476 [Forwarding newSession on session null to remote] DEBUG - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+13:15:14.477 [Forwarding newSession on session null to remote] DEBUG - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+13:15:14.491 [Forwarding newSession on session null to remote] DEBUG - -Dio.netty.machineId: 74:c6:3b:ff:fe:37:de:57 (auto-detected)
+13:15:14.545 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.buffer.checkAccessible: true
+13:15:14.545 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.buffer.checkBounds: true
+13:15:14.545 [AsyncHttpClient-1-2] DEBUG - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@75083da0
+13:15:14.572 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.recycler.maxCapacityPerThread: 4096
+13:15:14.572 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.recycler.ratio: 8
+13:15:14.572 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.recycler.chunkSize: 32
+13:15:14.572 [AsyncHttpClient-1-2] DEBUG - -Dio.netty.recycler.blocking: false
+13:15:15.537 [AsyncHttpClient-1-2] DEBUG - brotli4j not in the classpath; Brotli support will be unavailable.
+13:15:15.740 [main] DEBUG - -Dio.netty.initialSeedUniquifier: 0xd5f9a0806f7f17ec
+13:15:16.923 [main] INFO  - Go to my account-->Click on Login..
+13:15:18.291 [main] INFO  - Entering email and password..
+13:15:19.123 [main] INFO  - clicked on login button...
+13:15:19.242 [AsyncHttpClient-1-4] TRACE - Encoding WebSocket Frame opCode=8 length=26
+13:15:19.246 [AsyncHttpClient-1-4] TRACE - Decoding WebSocket Frame opCode=8
+13:15:19.246 [AsyncHttpClient-1-4] TRACE - Decoding WebSocket Frame length=2
+13:15:30.597 [AsyncHttpClient-1-7] TRACE - Encoding WebSocket Frame opCode=8 length=26
+13:15:30.598 [AsyncHttpClient-1-7] TRACE - Decoding WebSocket Frame opCode=8
+13:15:30.599 [AsyncHttpClient-1-7] TRACE - Decoding WebSocket Frame length=2
+13:20:11.572 [main] INFO  - Go to my account-->Click on Login..
+13:20:13.047 [main] INFO  - Entering email and password..
+13:20:13.845 [main] INFO  - clicked on login button...
+15:11:53.944 [main] INFO  - Go to my account-->Click on Login..
+15:11:55.599 [main] INFO  - Entering email and password..
+15:11:56.528 [main] INFO  - clicked on login button...
+15:12:36.768 [main] INFO  - Go to my account-->Click on Login..
+15:12:37.407 [main] INFO  - Entering email and password..
+15:12:38.606 [main] INFO  - clicked on login button...
+23:25:32.295 [main] INFO  - Go to my account-->Click on Login..
+23:25:34.156 [main] INFO  - Entering email and password..
+23:25:35.102 [main] INFO  - clicked on login button...
+02:08:03.473 [main] INFO  - Go to my account-->Click on Login..
+02:08:05.027 [main] INFO  - Entering email and password..
+02:08:06.013 [main] INFO  - clicked on login button...
+02:08:11.053 [main] INFO  - Go to my account-->Click on Login..
+02:08:12.749 [main] INFO  - Entering email and password..
+02:08:13.634 [main] INFO  - clicked on login button...
+02:08:17.443 [main] INFO  - Go to my account-->Click on Login..
+02:08:19.033 [main] INFO  - Entering email and password..
+02:08:19.762 [main] INFO  - clicked on login button...
+02:56:20.751 [main] INFO  - Go to my account-->Click on Login..
+02:56:21.724 [main] INFO  - Entering email and password..
+02:56:22.700 [main] INFO  - clicked on login button...
+02:56:28.070 [main] INFO  - Go to my account-->Click on Login..
+02:56:29.913 [main] INFO  - Entering email and password..
+02:56:31.014 [main] INFO  - clicked on login button...
+02:56:34.517 [main] INFO  - Go to my account-->Click on Login..
+02:56:36.085 [main] INFO  - Entering email and password..
+02:56:37.098 [main] INFO  - clicked on login button...
+02:59:40.787 [main] INFO  - Go to my account-->Click on Login..
+02:59:42.182 [main] INFO  - Entering email and password..
+02:59:42.978 [main] INFO  - clicked on login button...
+02:59:46.825 [main] INFO  - Go to my account-->Click on Login..
+02:59:48.242 [main] INFO  - Entering email and password..
+02:59:48.992 [main] INFO  - clicked on login button...
+02:59:52.144 [main] INFO  - Go to my account-->Click on Login..
+02:59:52.765 [main] INFO  - Entering email and password..
+02:59:53.831 [main] INFO  - clicked on login button...
+23:48:39.129 [main] INFO  - Go to my account-->Click on Login..
+23:48:45.970 [main] INFO  - Go to my account-->Click on Login..
+23:51:15.033 [main] INFO  - Go to my account-->Click on Login..
+23:51:24.488 [main] INFO  - Go to my account-->Click on Login..
+23:51:29.769 [main] INFO  - Go to my account-->Click on Login..
+23:51:36.608 [main] INFO  - Go to my account-->Click on Login..
+23:51:41.854 [main] INFO  - Go to my account-->Click on Login..
+23:54:06.461 [main] INFO  - Go to my account-->Click on Login..
+23:54:15.486 [main] INFO  - Go to my account-->Click on Login..
+23:54:22.027 [main] INFO  - Go to my account-->Click on Login..
+23:54:27.712 [main] INFO  - Go to my account-->Click on Login..
+23:54:34.138 [main] INFO  - Go to my account-->Click on Login..
+23:59:04.364 [main] INFO  - Go to my account-->Click on Login..
+23:59:13.210 [main] INFO  - Go to my account-->Click on Login..
+23:59:19.123 [main] INFO  - Go to my account-->Click on Login..
+23:59:25.314 [main] INFO  - Go to my account-->Click on Login..
+23:59:31.444 [main] INFO  - Go to my account-->Click on Login..
+00:02:57.070 [main] INFO  - Go to my account-->Click on Login..
+00:03:05.313 [main] INFO  - Go to my account-->Click on Login..
+00:03:11.223 [main] INFO  - Go to my account-->Click on Login..
+00:03:17.027 [main] INFO  - Go to my account-->Click on Login..
+00:03:22.540 [main] INFO  - Go to my account-->Click on Login..
+00:10:05.862 [main] INFO  - Go to my account-->Click on Login..
+00:10:13.817 [main] INFO  - Go to my account-->Click on Login..
+00:10:20.379 [main] INFO  - Go to my account-->Click on Login..
+00:10:26.252 [main] INFO  - Go to my account-->Click on Login..
+00:10:32.383 [main] INFO  - Go to my account-->Click on Login..
+00:16:35.070 [main] INFO  - Go to my account-->Click on Login..
+00:16:43.831 [main] INFO  - Go to my account-->Click on Login..
+00:16:50.155 [main] INFO  - Go to my account-->Click on Login..
+00:19:12.199 [main] INFO  - Go to my account-->Click on Login..
+00:21:33.225 [main] INFO  - Go to my account-->Click on Login..
+00:21:42.980 [main] INFO  - Go to my account-->Click on Login..
+00:21:59.185 [main] INFO  - Go to my account-->Click on Login..
+00:22:14.310 [main] INFO  - Go to my account-->Click on Login..
+00:22:29.646 [main] INFO  - Go to my account-->Click on Login..
+17:50:53.082 [main] INFO  - Go to my account-->Click on Login..
+17:50:54.738 [main] INFO  - Entering email and password..
+17:50:55.608 [main] INFO  - clicked on login button...
+17:52:32.657 [main] INFO  - Go to my account-->Click on Login..
+17:52:34.073 [main] INFO  - Entering email and password..
+17:52:34.789 [main] INFO  - clicked on login button...
+17:57:32.869 [main] INFO  - Go to my account-->Click on Login..
+17:57:34.545 [main] INFO  - Entering email and password..
+17:57:35.257 [main] INFO  - clicked on login button...
+18:00:51.169 [main] INFO  - Go to my account-->Click on Login..
+18:00:52.522 [main] INFO  - Entering email and password..
+18:00:53.318 [main] INFO  - clicked on login button...
+18:02:23.431 [main] INFO  - Go to my account-->Click on Login..
+18:02:24.748 [main] INFO  - Entering email and password..
+18:02:25.543 [main] INFO  - clicked on login button...
+19:46:50.594 [main] INFO  - Go to my account-->Click on Login..
+19:46:51.869 [main] INFO  - Entering email and password..
+19:46:53.596 [main] INFO  - clicked on login button...
+19:53:33.617 [main] INFO  - Go to my account-->Click on Login..
+19:53:34.438 [main] INFO  - Entering email and password..
+19:53:35.344 [main] INFO  - clicked on login button...
+00:16:59.390 [main] INFO  - Go to my account-->Click on Login..
+00:17:00.538 [main] INFO  - Entering email and password..
+00:17:01.971 [main] INFO  - clicked on login button...
+01:23:16.697 [main] INFO  - Go to my account-->Click on Login..
+01:23:17.429 [main] INFO  - Entering email and password..
+01:23:18.773 [main] INFO  - clicked on login button...
+01:28:53.444 [main] INFO  - Go to my account-->Click on Login..
+01:28:54.151 [main] INFO  - Entering email and password..
+01:28:55.161 [main] INFO  - clicked on login button...
+01:33:45.378 [main] INFO  - Go to my account-->Click on Login..
+01:33:46.060 [main] INFO  - Entering email and password..
+01:33:46.900 [main] INFO  - clicked on login button...
+01:46:17.023 [main] INFO  - Go to my account-->Click on Login..
+01:46:17.863 [main] INFO  - Entering email and password..
+01:46:18.848 [main] INFO  - clicked on login button...
+23:14:02.924 [main] INFO  - Go to my account-->Click on Login..
+23:14:05.458 [main] INFO  - Entering email and password..
+23:14:07.395 [main] INFO  - clicked on login button...
+23:14:58.030 [main] INFO  - Go to my account-->Click on Login..
+23:14:59.628 [main] INFO  - Entering email and password..
+23:15:01.075 [main] INFO  - clicked on login button...
+23:28:44.412 [main] INFO  - Go to my account-->Click on Login..
+23:28:45.264 [main] INFO  - Entering email and password..
+23:28:46.100 [main] INFO  - clicked on login button...
+23:59:06.476 [main] INFO  - Go to my account-->Click on Login..
+23:59:07.439 [main] INFO  - Entering email and password..
+23:59:08.379 [main] INFO  - clicked on login button...
+01:00:35.525 [main] INFO  - Go to my account-->Click on Login..
+01:00:36.469 [main] INFO  - Entering email and password..
+01:00:37.468 [main] INFO  - clicked on login button...
+00:12:01.355 [main] INFO  - Go to my account-->Click on Login..
+00:12:03.014 [main] INFO  - Entering email and password..
+00:12:04.343 [main] INFO  - clicked on login button...
